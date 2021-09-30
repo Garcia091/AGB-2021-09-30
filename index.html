@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="shadow bg-dark text-white">
+        <div class="header-content d-flex justify-content-center p-2">
+            <div id="header-msg" class="ml-5 align-self-center h2"> Sistema Parqueadero Geek </div>
+        </div>
+    </header>
+    <div class="form-container mt-5">
+        <form class="w-50 mx-auto" onsubmit="funcionSubmit(event)">
+            <div class="form-group font-weight">
+                <label for="Propietario"><strong>Propietario del vehículo:</strong> </label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="Propietario"
+                    placeholder="Propitario del vehículo" required>
+            </div>
+            <div class="form-group py-2">
+                <label for="modelo "><strong>Módelo del vehículo:</strong></label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="modelo"
+                    placeholder="Módelo del vehículo:" required>
+            </div>
+            <div class="row py-2">
+                <div class="col-6">
+                    <label for="Placa"><strong>Placa</strong></label>
+                    <input type="text" class="form-control rounded-0 shadow-sm" id="Placa" placeholder="NN-NN-LL"
+                        required>
+                </div>
+                <div class="col-6">
+                    <label for="tipo"><strong>Tipo vehículo</strong></label>
+                    <input type="text" class="form-control rounded-0 shadow-sm" id="tipo" placeholder="Carro Moto"
+                        required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="entryDate"><strong>Fecha de Entrada:</strong></label>
+                    <input type="date" class="form-control rounded-0 shadow-sm" id="entryDate " required>
+                </div>
+                <div class="col-4">
+                    <label for="incio"><strong>Hora de inicio </strong></label>
+                    <input type="datetime" class="form-control rounded-0 shadow-sm" id="incio" placeholder="hh:mm"
+                        required>
+                </div>
+                <div class="col-4">
+                    <label for="Salida"><strong>Cantidad de Horas</strong></label>
+                    <input type="datetime" class="form-control rounded-0 shadow-sm" id="salida" placeholder="Cantidad"
+                        required>
+                </div>
+            </div>
+
+            <div id="comp" class="py-2">
+                <div class="row">
+                    <div class="col-4">
+                        <label for="entryDate"><strong>Valor inicial </strong></label>
+                        <input type="text" class="form-control rounded-0 shadow-sm" id="Valor">
+                    </div>
+                    <div class="col-4">
+                        <label for="incio"><strong>Descuento </strong></label>
+                        <input type="text" class="form-control rounded-0 shadow-sm" id="Descuento">
+                    </div>
+                    <div class="col-4">
+                        <label for="Salida"><strong>Total</strong></label>
+                        <input type="text" class="form-control rounded-0 shadow-sm" id="Total">
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-block container text-center py-5">
+                <div class="d-grid gap-2 d-md-block">
+                    <button 
+                        class="btn btn-primary" 
+                        type="button" id="btnOne" 
+                        onclick="calcular()">
+                        Calcular
+                    </button>
+                    <button class="btn btn-primary" type="button" id="btnOne" onclick="window.print()">Imprimir
+                    </button>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
